@@ -19,11 +19,9 @@ public class SimpleQuizUI extends JFrame {
         setSize(500, 400);
         setLocationRelativeTo(null);
 
-        // Painel principal
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BorderLayout());
 
-        // Painel de entrada
         JPanel inputPanel = new JPanel(new GridLayout(4, 2, 5, 5));
         inputPanel.setBorder(BorderFactory.createTitledBorder("Adicionar Questão"));
 
@@ -75,7 +73,6 @@ public class SimpleQuizUI extends JFrame {
 
         add(mainPanel);
 
-        // Ações dos botões
         addButton.addActionListener(e -> {
             int number = (Integer) numberSpinner.getValue();
             int correct = (Integer) correctSpinner.getValue();
@@ -109,7 +106,6 @@ public class SimpleQuizUI extends JFrame {
     }
 
     public static void main(String[] args) {
-        // Tornar a interface mais bonita
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
